@@ -1,4 +1,3 @@
-import { set } from "immer/dist/internal";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTask } from "../redux/tasksSlice";
@@ -29,6 +28,10 @@ const AddTodo = () => {
         value={value}
         onChange={(event) => setValue(event.target.value)}
       ></input>
+      <button className="task-button" onClick={onSubmit}>
+        save
+      </button>
     </div>
   );
 };
+export default AddTodo;
